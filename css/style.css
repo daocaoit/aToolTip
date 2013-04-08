@@ -26,17 +26,16 @@ table {border-collapse: collapse;border-spacing: 0;}
 
 
 body {
-	background: #282828 url(../images/bg.png) repeat-x;
-	color: #999999;
-	font-size: 12px;
-	line-height: 20px;
-	font-family: Arial, helvetica;
+	background: #fffff;
+	color: #666;
+	line-height:1.5em;
+    font: 13px 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, 'Hiragino Sans GB', sans-serif;
 }
 
 a,
 a:link,
 a:visited {
-	color: #FEC92C;
+	color: #4d4d4d;
 	text-decoration: none;
 	
 } 
@@ -49,7 +48,7 @@ a:focus {
 
 
 a.exampleTip {
-	color: #FEC92C;
+	color: #000000;
 }
 
 a.exampleTip:hover{
@@ -59,7 +58,7 @@ a.exampleTip:hover{
 .section {
 	text-align: left;
 	padding-bottom: 18px;
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid #ebebeb;
 	margin-bottom: 18px;
 }
 
@@ -68,12 +67,12 @@ p {
 }
 
 h2 {
-	color: #fff;
+	color: #3b5998;
 	font-size: 22px;
 	line-height: 24px;
 	margin: 0 0 24px;
 	padding: 0;
-	font-weight: normal;
+	font-weight:bold;
 }
 
 h3{
@@ -91,18 +90,68 @@ h1.logo {
 	margin: 40px auto 0;
 }
 
-	h1.logo a{
-		display: block;
-		height: 80px;
-		width: 260px;
-		text-indent: -9999px;
-		background: url(../images/logo.png) no-repeat;
-	}
+h1.logo a{
+	display: block;
+	height: 80px;
+	width: 260px;
+	text-indent: -9999px;
+	background: url(../images/logo.png) no-repeat;
+}
 
 
 ul.demos {
 	list-style-type: none;
 
+}
+.links{
+    text-align:center;
+}
+.links .btn{
+    font-size:22px;
+    background:#f5f5f5;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #b8b8b8;
+    
+    
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    
+    
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    
+    color: #3b5998;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.5em;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.1);
+    
+    padding:3px 10px 3px 10px;
+}
+.links .btn:hover{
+    color:#ffffff;
+    background:#3b5998;
+    border: 1px solid #3b5998;
+}
+
+.screenshot ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    clear:both;
+    width:100%;
+    height:700px;
+}
+.screenshot ul li{
+    clear:none;
+    float:left;
+    width:320px;
+}
+.screenshot ul li img{
+    border: 1px solid #ebebeb;
+    padding:2px;
 }
 
 ul.demos li{
@@ -160,15 +209,17 @@ a.demoBtn:hover {
 	margin-bottom: 2px;
 }
 
-ul.quickFacts {
-	list-style-position: inside;
-	list-style-type: disc;
+.quickFacts h2{}
+.quickFacts p{
+    color:#1b9772;
+	line-height:1em;
 }
 
-p.license,
-p.copyright {
-	font-size: 11px;
+.footer{
+    color:#4d4d4d;
+    font-size:12px;
+    text-align:center;
+    height:50px;
 }
-
 
 

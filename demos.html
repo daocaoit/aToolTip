@@ -1,9 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-		<title>aToolTip Demos</title>
+		<title>atooltip Demos</title>
 		
 		<!-- CSS -->
 		<link type="text/css" href="css/style.css" rel="stylesheet"  media="screen" />
@@ -13,31 +12,27 @@
 		
 		
 		<!-- Scripts -->
-		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
 		
 		<!-- aToolTip js -->
 		<script type="text/javascript" src="js/jquery.atooltip.js"></script>
 		<script type="text/javascript">
 			$(function(){ 
-				$('a.normalTip').aToolTip();
+				$('a.normalTip').atooltip({});
+				$('a.followMouse').atooltip({fixed:false});
 				
-				
-				$('a.fixedTip').aToolTip({
-		    		fixed: true
-				});
-				
-				$('a.clickTip').aToolTip({
-		    		clickIt: true,
+                $('a.closeBlur').atooltip({closeBlur:true});
+                
+				$('a.clickOpen').atooltip({
+		    		clickOpen: true,
 		    		tipContent: 'Hello I am aToolTip with content from the "tipContent" param'
 				});		
 				
-				$('a.callBackTip').aToolTip({
-					clickIt: true,
+				$('a.callBackTip').atooltip({
+					clickOpen: true,
 					onShow: function(){alert('I fired OnShow')},
 					onHide: function(){alert('I fired OnHide')}
-				});		
-				
-				
+				});
 			}); 
 		</script>
 		
@@ -50,39 +45,59 @@
 	 	<div class="primaryWrapper">
 	 	
 	 		<div class="branding">
-	 			<h1 class="logo"><a href="#">aToolTip</a></h1>
+	 			<h1 class="logo"><a href="#">atooltip</a></h1>
 	 		</div>
 			
-		 
-
+            <div class='section quickFacts'>
+                <h2>v1.6 changes</h2>
+                <p>* keep Lightweight</p>
+                <p>* add one display mode,could display html content and keep alive until you close by action that can be defined</p>
+                <p>* simple css style</p>
+                <p>* there must have 'id' in the element(just for unique or even different css style)</p>
+            </div>
+            <div class='section links'>
+                <input type='button' class='btn' name='github' value="Download" onclick='window.location.href="https://github.com/daocaoit/aToolTip/archive/master.zip"'>
+                <input type='button' class='btn' name='github' value="fork" onclick='window.location.href="https://github.com/daocaoit/aToolTip"'>
+            </div>
+            <div class='section screenshot'>
+                <h2>ScreenShot</h2>
+                <ul>
+                <li><img src='images/atooltip/0.jpg'></li>
+                <li><img src='images/atooltip/1.jpg'></li>
+                <li><img src='images/atooltip/2.jpg'></li>
+                <li><img src='images/atooltip/3.jpg'></li>
+                <li><img src='images/atooltip/4.jpg'></li>
+                <li><img src='images/atooltip/5.jpg'></li>
+            </ul>
+            
+            </div>
+            
 			<!-- DEMOS -->
 			
 			<div class="section" id="demos">
 		 		<h2>Demos</h2>
-			 
+			    
 			 	<ul class="demos">
-			 		<li><a href="#" class="normalTip exampleTip" title="Hello, I am aToolTip">Normal Tooltip</a> - This is a normal tooltip with default settings.</li>
-			 		<li><a href="#" class="fixedTip exampleTip" title="Hello, I am aToolTip">Fixed Tooltip</a> - This is a fixed tooltip that doesnt follow the mouse.</li>
-			 		<li><a href="#" class="clickTip exampleTip" >On Click Tooltip</a> - This is a click activated tooltip with content passed in from 'tipContent' param</li>
-			 		<li><a href="#" class="callBackTip exampleTip" title="Hello, I am aToolTip">Callback Tooltip</a> - This is a click activated tooltip with callback functions.</li>
+			 		<li><a href="#" id='normaltip' class="normalTip exampleTip" title="Hello, I am normal atooltip">Normal Tooltip</a> - This is a normal tooltip with default settings.</li>
+			 		<li><a href="#" id='followmouse' class="followMouse exampleTip" title="Hello, I am atooltip that follow mouse">Follow mouse Tooltip</a> - This is a tooltip that follow mouse</li>
+                    <li><a href="#" id='closeBlur' class="closeBlur exampleTip" title="Hello, I am closeBlur atooltip">closeBlur Tooltip</a> - This is a closeBlur tooltip</li>
 			 	</ul>
+                
+                <ul class='demos'>
+			 		<li><a href="#" id='clickopen' class="clickOpen exampleTip" >On Click Tooltip</a> - This is a click activated tooltip with content passed in from 'tipContent' param</li>
+			 		<li><a href="#" id='callBackTip' class="callBackTip exampleTip" title="Hello, I am aToolTip">Callback Tooltip</a> - This is a click activated tooltip with callback functions.</li>
+                </ul>
 
 		 	</div>			
 			
-			<!-- END DEMOS -->
-	
-			
-			<p class="copyright">
-				Copyright &copy; 20011 Ara Abcarians. aToolTip was built for use with <a href="http://jquery.com">jQuery</a> by <a href="http://ara-abcarians.com/"> Ara Abcarians.</a> 
-			</p>
-			
-			<p class="license">
-<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://creativecommons.org/images/public/somerights20.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.			
-			</p>
 
+            
 	 	
 	 	</div> <!-- /primaryWrapper -->
-	 
+	     
+        <div class='footer'>
+            Thanks <a href='http://ara-abcarians.com/jquery/atooltip/' target='_blank'>aTollTip v1.5</a> and based on <a href='http://jquery.com/'>jQuery</a>
+        </div>
 
 	</body>
 </html>

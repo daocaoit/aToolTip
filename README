@@ -1,4 +1,10 @@
-Quick Facts
+v1.6 changes
+    * keep Lightweight
+    * add one display mode,could display html content and keep alive until you close by action that can be defined
+    * simple css style
+    * there must have 'id' in the element(just for unique or even different css style)
+
+v1.5 Quick Facts
 
     * Lightweight (only 4kb uncompressed)
     * Easy to use
